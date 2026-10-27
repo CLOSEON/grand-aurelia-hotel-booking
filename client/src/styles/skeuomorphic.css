@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #faf9f6;
+    color: #1c1917;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Subtle, Refined Luxury Text Accent */
+.gold-accent-text {
+  color: #996515;
+}
+
+/* Minimalist Production Luxury Button (Primary Dark) */
+.btn-primary-luxury {
+  position: relative;
+  background-color: #18181b;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid #27272a;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary-luxury:hover {
+  background-color: #27272a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-luxury:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Minimalist Production Luxury Button (Secondary Light) */
+.btn-secondary-luxury {
+  background-color: #ffffff;
+  color: #27272a;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-secondary-luxury:hover {
+  background-color: #f4f4f5;
+  border-color: #d4d4d8;
+  color: #09090b;
+}
+
+.btn-secondary-luxury:active {
+  transform: translateY(1px);
+  background-color: #e4e4e7;
+}
+
+/* Refined Minimalist Card */
+.minimal-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Clean Inset Input */
+.minimal-input {
+  background-color: #ffffff;
+  border: 1px solid #d6d3d1;
+  color: #1c1917;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.15s ease-in-out;
+}
+
+.minimal-input:focus {
+  outline: none;
+  border-color: #18181b;
+  box-shadow: 0 0 0 1px #18181b, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 3D Golden Key Keychain Physics */
+@keyframes keySway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(3deg) translateY(1px);
+  }
+  75% {
+    transform: rotate(-3deg) translateY(1px);
+  }
+}
+
+.key-swaying {
+  animation: keySway 4s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* 3D Credit Card Flip */
+.credit-card-container {
+  perspective: 1000px;
+}
+
+.credit-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.credit-card-flipped {
+  transform: rotateY(180deg);
+}
+
+.credit-card-front,
+.credit-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.credit-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Minimalist Clean Perforated Voucher */
+.perforated-ticket {
+  position: relative;
+  background-color: #ffffff;
+  color: #1c1917;
+  border-radius: 1rem;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Minimal Crimson Wax Seal */
+.wax-seal {
+  background-color: #991b1b;
+  border: 2px solid #ef4444;
+  box-shadow: 0 4px 10px rgba(153, 27, 27, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Clean modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
